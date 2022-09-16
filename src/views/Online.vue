@@ -45,7 +45,7 @@ export default {
       )
     },
     promptSurrender() {
-      this.$root.modal.show(ModalYeaNah, {header: 'Are u sure u want to leave?', resolve: 'ragequit', rejrect: 'not yet'},
+      this.$root.modal.show(ModalYeaNah, {header: 'Are u sure u want to leave?', resolve: 'ragequit', reject: 'not yet'},
           ()=>{this.$store.state.ws.surrender()}
       )
     },

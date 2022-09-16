@@ -75,7 +75,7 @@ export default {
   },
   created() {
     try {
-      let ws = new WebsocketHandler('94.242.96.2', 3000)
+      let ws = new WebsocketHandler('94.242.96.2/ws/tic-tac-toe', 5001)
       this.$store.commit('setWs', ws)
       this.$root.modal.show(ModalProgress, {header: 'Connecting', msg: 'Establishing connection with the backend service, please wait...'},
           () => {}, () => {}

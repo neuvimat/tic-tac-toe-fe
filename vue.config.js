@@ -1,3 +1,5 @@
 module.exports = {
-  publicPath: 'tic-tac-toe/',
+
 };
+
+// publicPath: 'tic-tac-toe/',

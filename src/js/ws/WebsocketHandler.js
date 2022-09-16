@@ -3,8 +3,8 @@ import {LobbyState} from "@/js/ws/LobbyState";
 
 export class WebsocketHandler {
     constructor(hostname, port) {
-        console.log('making websocket to:', `ws://${hostname}:${port}`);
-        this.socket = new WebSocket(`ws://${hostname}:${port}`)
+        console.log('making websocket to:', `ws://${hostname}${port}`);
+        this.socket = new WebSocket(`ws://${hostname}${port}`)
         this.state = new LobbiesState(this)
 
         this.socket.addEventListener('close', (msg) =>{this.state.onClose(msg, this.socket)})

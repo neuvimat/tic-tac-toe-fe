@@ -75,7 +75,7 @@ export default {
   },
   created() {
     try {
-      let ws = new WebsocketHandler('digistruct.cz/ws/tic-tac-toe', '')
+      let ws = new WebsocketHandler(process.env.VUE_APP_WEBSOCKET_URL)
       this.$store.commit('setWs', ws)
       this.$root.modal.show(ModalProgress, {header: 'Connecting', msg: 'Establishing connection with the backend service, please wait...'},
           () => {}, () => {}
